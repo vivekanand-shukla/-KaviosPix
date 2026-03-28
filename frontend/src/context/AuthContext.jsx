@@ -3,7 +3,7 @@ import axios from "axios"
 
 const AuthContext = createContext()
 
-const API_URL = "https://kavios-pix-ap8t.vercel.app"
+const API_URL = "https://kavios-pix-neon.vercel.app"
 
 export function AuthProvider({ children }) {
 
