@@ -1,11 +1,12 @@
 import { createContext, useContext, useState, useEffect } from "react"
 import axios from "axios"
-
+import { useNavigate } from "react-router-dom"
 const AuthContext = createContext()
 
 const API_URL = "https://kavios-pix-ap8t.vercel.app"
 
 export function AuthProvider({ children }) {
+  const navigate = useNavigate()
   const [user, setUser] = useState(null)
   const [loading, setLoading] = useState(true)
 
@@ -36,7 +37,7 @@ export function AuthProvider({ children }) {
   }, [])
 
   const login = () => {
-    window.location.href = `${API_URL}/auth/google`
+    navigate(`${API_URL}/auth/google`)
   }
 
   const logout = () => {
