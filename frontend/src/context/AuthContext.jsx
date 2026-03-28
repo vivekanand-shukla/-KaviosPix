@@ -3,7 +3,7 @@ import axios from "axios"
 
 const AuthContext = createContext()
 
-const API_URL = "http://localhost:5000"
+const API_URL = "https://kavios-pix-ap8t.vercel.app"
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null)
