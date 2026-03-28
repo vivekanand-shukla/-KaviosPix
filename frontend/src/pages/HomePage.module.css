@@ -1,0 +1,238 @@
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  color: #9090b0;
+  font-size: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #e8e8f0;
+}
+
+.createBtn {
+  padding: 10px 22px;
+  background: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.createBtn:hover {
+  background: #6d28d9;
+  transform: translateY(-1px);
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  height: 50vh;
+  color: #6060a0;
+}
+
+.emptyIcon {
+  font-size: 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.albumCard {
+  background: #1a1a24;
+  border: 1px solid #2a2a3a;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.albumCard:hover {
+  border-color: #7c3aed;
+  transform: translateY(-3px);
+}
+
+.albumCover {
+  background: linear-gradient(135deg, #1e1b4b, #2e1065);
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.albumIcon {
+  font-size: 50px;
+}
+
+.albumInfo {
+  padding: 16px;
+}
+
+.albumName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e8e8f0;
+  margin-bottom: 6px;
+}
+
+.albumDesc {
+  font-size: 13px;
+  color: #7070a0;
+  margin-bottom: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.sharedTag {
+  font-size: 12px;
+  color: #a78bfa;
+}
+
+.deleteBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.albumCard:hover .deleteBtn {
+  opacity: 1;
+}
+
+/* Modal */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.modal {
+  background: #1a1a24;
+  border: 1px solid #2a2a3a;
+  border-radius: 16px;
+  padding: 30px;
+  width: 90%;
+  max-width: 440px;
+}
+
+.modalTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #e8e8f0;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  background: #0f0f18;
+  border: 1px solid #2a2a3a;
+  border-radius: 8px;
+  color: #e8e8f0;
+  font-size: 14px;
+  margin-bottom: 12px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  border-color: #7c3aed;
+}
+
+.textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: #0f0f18;
+  border: 1px solid #2a2a3a;
+  border-radius: 8px;
+  color: #e8e8f0;
+  font-size: 14px;
+  margin-bottom: 16px;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.textarea:focus {
+  border-color: #7c3aed;
+}
+
+.errorText {
+  color: #f87171;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.modalBtns {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.cancelBtn {
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid #3a3a52;
+  color: #9090b0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.cancelBtn:hover {
+  border-color: #9090b0;
+}
+
+.confirmBtn {
+  padding: 10px 20px;
+  background: #7c3aed;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.confirmBtn:hover {
+  background: #6d28d9;
+}
