@@ -1,6 +1,7 @@
 import axios from "axios"
 
 const API_URL = "https://kavios-pix-neon.vercel.app"
+// const API_URL1 = "http://localhost:5000"
 // https://kavios-pix-neon.vercel.app/
 // create axios instance with base url
 const api = axios.create({
