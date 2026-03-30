@@ -2,7 +2,6 @@ const Album = require("../models/Album");
 const Image = require("../models/Image");
 const User = require("../models/User");
 const cloudinary = require("../config/cloudinary");
-
 // create a new album
 const createAlbum = async (req, res) => {
   try {
@@ -24,7 +23,6 @@ const createAlbum = async (req, res) => {
     res.status(500).json({ message: "Error creating album", error: err.message });
   }
 };
-
 // get all albums (owned + shared)
 const getAllAlbums = async (req, res) => {
   try {
@@ -43,7 +41,6 @@ const getAllAlbums = async (req, res) => {
     res.status(500).json({ message: "Error getting albums", error: err.message });
   }
 };
-
 // update album description
 const updateAlbum = async (req, res) => {
   try {
@@ -69,7 +66,6 @@ const updateAlbum = async (req, res) => {
     res.status(500).json({ message: "Error updating album", error: err.message });
   }
 };
-
 // delete album and all its images
 const deleteAlbum = async (req, res) => {
   try {
@@ -103,7 +99,6 @@ const deleteAlbum = async (req, res) => {
     res.status(500).json({ message: "Error deleting album", error: err.message });
   }
 };
-
 // share album with other users via email
 const shareAlbum = async (req, res) => {
   try {

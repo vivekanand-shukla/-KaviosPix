@@ -10,7 +10,6 @@ const {
 } = require("../controllers/imageController");
 const { protect } = require("../middleware/authMiddleware");
 const upload = require("../middleware/uploadMiddleware");
-
 // image routes - all protected
 router.post("/:albumId/images", protect, upload.single("file"), uploadImage);
 router.get("/:albumId/images", protect, getAllImages);

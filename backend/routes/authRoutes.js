@@ -17,5 +17,4 @@ router.get("/google/callback",
 
 // get current logged in user
 router.get("/me", protect, getMe);
-
 module.exports = router;

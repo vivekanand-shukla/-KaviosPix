@@ -2,7 +2,6 @@ const Image = require("../models/Image");
 const Album = require("../models/Album");
 const cloudinary = require("../config/cloudinary");
 const path = require("path");
-
 // helper to check if user has access to album
 const checkAlbumAccess = async (albumId, user) => {
   const album = await Album.findOne({ albumId });
@@ -16,7 +15,6 @@ const checkAlbumAccess = async (albumId, user) => {
 
   return album;
 };
-
 // upload image to album
 const uploadImage = async (req, res) => {
   try {
@@ -54,8 +52,7 @@ const uploadImage = async (req, res) => {
       );
       stream.end(req.file.buffer);
     });
-
-    // save image to db
+// save image to db
     const image = await Image.create({
       albumId: album._id,
       name: fileName,
@@ -73,7 +70,6 @@ const uploadImage = async (req, res) => {
     res.status(500).json({ message: "Error uploading image", error: err.message });
   }
 };
-
 // get all images in album (supports tag filter)
 const getAllImages = async (req, res) => {
   try {
@@ -100,7 +96,6 @@ const getAllImages = async (req, res) => {
     res.status(500).json({ message: "Error getting images", error: err.message });
   }
 };
-
 // get only favorite images
 const getFavoriteImages = async (req, res) => {
   try {
@@ -119,7 +114,6 @@ const getFavoriteImages = async (req, res) => {
     res.status(500).json({ message: "Error getting favorites", error: err.message });
   }
 };
-
 // mark or unmark image as favorite
 const favoriteImage = async (req, res) => {
   try {
@@ -146,7 +140,6 @@ const favoriteImage = async (req, res) => {
     res.status(500).json({ message: "Error updating favorite", error: err.message });
   }
 };
-
 // add comment to image
 const addComment = async (req, res) => {
   try {
@@ -177,7 +170,6 @@ const addComment = async (req, res) => {
     res.status(500).json({ message: "Error adding comment", error: err.message });
   }
 };
-
 // delete image
 const deleteImage = async (req, res) => {
   try {

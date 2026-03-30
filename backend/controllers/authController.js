@@ -11,7 +11,6 @@ const googleCallback = (req, res) => {
     res.status(500).json({ message: "Something went wrong" });
   }
 };
-
 // get current user info
 const getMe = (req, res) => {
   try {
