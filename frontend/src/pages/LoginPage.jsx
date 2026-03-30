@@ -1,5 +1,5 @@
 import { useAuth } from "../context/AuthContext"
-import styles from "./LoginPage.module.css"
+import styles from "./LoginPage.css"
 
 function LoginPage() {
   const { login } = useAuth()

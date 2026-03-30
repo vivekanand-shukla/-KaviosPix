@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import api from "../utils/api"
-import styles from "./HomePage.module.css"
+import styles from "./HomePage.css"
 
 function HomePage() {
   const [albums, setAlbums] = useState([])
